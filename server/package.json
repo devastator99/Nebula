@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "npm run build-client && npm run build-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "cd../public && npm install && npm run build",
+    "build-server": "npm install && npm run build"
   },
   "author": "",
   "license": "ISC",

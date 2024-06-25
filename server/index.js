@@ -8,6 +8,15 @@ const socket = require("socket.io");
 require("dotenv").config();
 
 app.use(cors());
+
+
+app.use(cors({
+  origin:[],
+  methods:["POST" , "GET"],
+  credentials:true,
+}))
+
+
 app.use(express.json());
 
 mongoose
